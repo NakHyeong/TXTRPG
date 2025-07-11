@@ -1,0 +1,14 @@
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.AssemblyInfoInputs.cache
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.AssemblyInfo.cs
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.csproj.CoreCompileInputs.cache
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\bin\Debug\net8.0\TXTRPG.exe
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\bin\Debug\net8.0\TXTRPG.deps.json
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\bin\Debug\net8.0\TXTRPG.runtimeconfig.json
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\bin\Debug\net8.0\TXTRPG.dll
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\bin\Debug\net8.0\TXTRPG.pdb
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.dll
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\refint\TXTRPG.dll
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.pdb
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.genruntimeconfig.cache
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\ref\TXTRPG.dll

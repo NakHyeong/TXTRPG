@@ -1,0 +1,4 @@
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TitleManager\obj\Debug\net8.0\TitleManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TitleManager\obj\Debug\net8.0\TitleManager.AssemblyInfoInputs.cache
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TitleManager\obj\Debug\net8.0\TitleManager.AssemblyInfo.cs
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TitleManager\obj\Debug\net8.0\TitleManager.csproj.CoreCompileInputs.cache
