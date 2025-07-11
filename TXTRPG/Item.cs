@@ -18,14 +18,22 @@ namespace TXTRPG
         public int Defense { get; private set; } // 방어력
         public int Price { get; private set; } // 가격
 
-        public Item(string name, string description, int attack = 0, int defense = 0, int price = 0)
+        public bool IsWeapon {  get; private set; } // 무기 여부
+        public bool IsArmor { get; private set; } // 방어구 여부
+
+        public bool IsPurchased { get; set; } // 구매 여부
+
+        public Item(string name, string description, bool isWeapon, bool isArmor, int attack = 0, int defense = 0, int price = 0)
             {
                 Name = name; // 아이템 이름은 생성자에서 설정
             Description = description; // 아이템 이름과 설명은 생성자에서 설정
+            IsWeapon = isWeapon;  // 무기 여부는 생성자에서 설정
+            IsArmor = isArmor; // 방어구 여부는 생성자에서 설정
             Attack = attack; // 공격력은 기본값 0으로 설정
             Defense = defense; // 공격력과 방어력은 기본값 0으로 설정
             Price = price; // 가격은 기본값 0으로 설정
             IsEquipped = false; // 아이템 생성 시 기본적으로 장착되지 않은 상태
+            IsPurchased = false; // 아이템 생성 시 기본적으로 구매되지 않은 상태
         }
         }
     }

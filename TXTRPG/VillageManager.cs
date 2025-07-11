@@ -21,6 +21,14 @@ namespace TXTRPG
 
             foreach(Item item in playerInventory.items) // 인벤토리에 있는 아이템을 상점에 등록
             {
+                foreach (Item shopItem in shop.shopItems) // 상점 아이템 목록에서
+                {
+                    if (shopItem.Name == item.Name) // 인벤토리 아이템 이름과 상점 아이템 이름이 같으면
+                    {
+                        shopItem.IsPurchased = true; // 장착 여부를 상점 아이템과 동일하게 설정
+                        break; // 중복 등록 방지
+                    }
+                }
                 shop.RegisterPurchasedItem(item.Name); // 상점에 구매한 아이템 이름 등록
             }
         }
@@ -49,8 +57,10 @@ namespace TXTRPG
                 Console.WriteLine("2. 인벤토리");
                 Console.WriteLine("3. 상점");
                 Console.WriteLine("4. 던전");
-                Console.WriteLine("5. 게임 종료");
-                Console.Write(" 원하시는 행동을 입력해주세요. :  ");
+                Console.WriteLine("5. 휴식하기");
+                Console.WriteLine("6. 게임 종료");
+                Console.WriteLine(" 원하시는 행동을 입력해주세요. :  ");
+                Console.Write(">>  ");
 
                 string input = Console.ReadLine(); // 사용자 입력 받기
 
@@ -69,7 +79,7 @@ namespace TXTRPG
                 else if (input == "3")
                 {
                     Console.WriteLine("\n[상점]을 선택했습니다.");
-                    shop.ShowShop(); // 상점 메소드 호출
+                    shop.ShowMenu(); // 상점 메소드 호출
                     // 상점 로직 추가
                 }
                 else if (input == "4")
@@ -79,12 +89,22 @@ namespace TXTRPG
                 }
                 else if (input == "5")
                 {
+                    {
+                        Console.WriteLine("\n[휴식하기]를 선택했습니다.");
+                        Rest rest = new Rest(playerStatus, playerInventory); // 휴식소 객체 생성
+                        rest.EnterRest(); // 휴식소로 이동하는 메소드 호출
+                    }
+                    
+                    
+                }
+                else if (input == "6")
+                {
                     Console.WriteLine("\n게임을 종료합니다...");
                     Environment.Exit(0); // 프로그램 완전히 종료 (CMD 창 닫힘)
                 }
                 else
                 {
-                    Console.WriteLine("잘못된 입력입니다. 1 ~ 5 으로 다시 시도해주세요.");
+                    Console.WriteLine("잘못된 입력입니다. 1 ~ 6 으로 다시 시도해주세요.");
                 }
             }
             

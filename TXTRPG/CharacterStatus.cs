@@ -13,19 +13,11 @@ namespace TXTRPG
         public string job { get; private set; } // 캐릭터 직업, 값을 가져올 수 있지만 외부에서 변경할 수 없음(챕터 3 강의 내용자료)
         public string name { get; private set; } // 캐릭터 이름, 값을 가져올 수 있지만 외부에서 변경할 수 없음
         public int level { get; private set; } // 캐릭터 레벨, 값을 가져올 수 있지만 외부에서 변경할 수 없음
-        public int gold { get; private set; } // 캐릭터 소지 금액, 값을 가져올 수 있지만 외부에서 변경할 수 없음
-
+        public int gold { get; set; } // 캐릭터 소지 금액, 외부에서 값을 가져오고 변경할 수 있음(소지 금액은 외부에서 변경 가능해야 하므로 set을 public으로 설정)
         public int attack { get; private set; } // 공격력, 값을 가져올 수 있지만 외부에서 변경할 수 없음
         public int defense { get; private set; } // 방어력, 값을 가져올 수 있지만 외부에서 변경할 수 없음
-        public int hp { get; private set; } // 체력, 값을 가져올 수 있지만 외부에서 변경할 수 없음
-        public void SetGold(int newGold) // 소지 금액을 설정하는 메소드
-        {
-                gold = newGold; // 소지 금액 업데이트
-        }
-        public void DecreaseGold(int amount) // 소지 금액을 감소시키는 메소드
-        {
-            gold -= amount; // 소지 금액에서 지정된 금액을 감소
-        }
+        public int hp { get; set; } // 체력, 외부에서 값을 가져오고 변경할 수 있음(체력은 외부에서 변경 가능해야 하므로 set을 public으로 설정)
+        public int maxHp { get; private set; } // 최대 체력, 값을 가져올 수 있지만 외부에서 변경할 수 없음
 
         public CharacterInventory Inventory { get; private set; } // 인벤토리를 외부에서 접근할 수 있도록 프로퍼티로 제공
 
@@ -39,6 +31,7 @@ namespace TXTRPG
             attack = 10; // 기본 공격력
             defense = 5; // 기본 방어력
             hp = 100; // 기본 체력
+            maxHp = 100; // 최대 체력
 
             Console.Clear();
             Console.WriteLine($"당신의 직업은 [{job}] 입니다.\n"); // 직업 출력
@@ -76,7 +69,20 @@ namespace TXTRPG
 
         private Item CloneItem(Item item) // 아이템을 복사하는 메소드
         {
-            return new Item(item.Name, item.Description, item.Attack, item.Defense, item.Price); // 아이템의 속성을 그대로 복사하여 새로운 아이템 생성
+            return new Item(item.Name, item.Description, item.IsWeapon, item.IsArmor, item.Attack, item.Defense, item.Price); // 아이템의 속성을 그대로 복사하여 새로운 아이템 생성
+        }
+        public void SetGold(int newGold) // 소지 금액을 설정하는 메소드
+        {
+            gold = newGold; // 소지 금액 업데이트
+        }
+        public void DecreaseGold(int amount) // 소지 금액을 감소시키는 메소드
+        {
+            gold -= amount; // 소지 금액에서 지정된 금액을 감소
+        }
+
+        public void RestoreHP()
+        {
+            hp = maxHp; // 체력을 최대 체력으로 설정하여 전부 회복
         }
 
 
@@ -105,7 +111,7 @@ namespace TXTRPG
                 Console.WriteLine($"직업 : {job}");
                 Console.WriteLine($"공격력 : {totalattack}( +{totalattack - attack} )");
                 Console.WriteLine($"방어력 : {totaldefanse}( +{totaldefanse - defense} )");
-                Console.WriteLine($"체력 : {hp}");
+                Console.WriteLine($"체력 : {hp} / { maxHp} ");
                 Console.WriteLine($"Gold : {gold}");
 
 

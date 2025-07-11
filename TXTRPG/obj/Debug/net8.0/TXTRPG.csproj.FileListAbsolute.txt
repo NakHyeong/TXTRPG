@@ -12,3 +12,4 @@ C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\r
 C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.pdb
 C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.genruntimeconfig.cache
 C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\ref\TXTRPG.dll
+C:\Users\snh07\OneDrive\바탕 화면\workspace\TXTRPG\TXTRPG\obj\Debug\net8.0\TXTRPG.sourcelink.json

@@ -133,6 +133,15 @@ namespace TXTRPG
                     }
                     else // 아이템이 장착되어 있지 않은 경우
                     {
+                        foreach (Item item in items) // 모든 아이템을 순회하여 장착 해제
+                        {
+                            if (item.IsEquipped && ((item.IsWeapon && selectedItem.IsWeapon) || (item.IsArmor && selectedItem.IsArmor)))
+                            {
+                                item.IsEquipped = false; // 이미 장착된 아이템이 있다면 장착 해제
+                                Console.WriteLine($"{item.Name} 아이템이 장착 해제되었습니다.");
+                            }
+
+                        }
                         selectedItem.IsEquipped = true; // 장착
                         Console.WriteLine($"{selectedItem.Name} 아이템이 장착되었습니다.");
                     }
