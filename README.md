@@ -23,4 +23,4 @@
  휴식 기능과 아이템 구매/판매 기능 포함
  아이템 클래스(무기, 방어구) 나눠 중복착용 불가하게함
 
-git clone https://github.com/사용자명/TXTRPG.git
+git clone https://github.com/사용자명/TXTRPG.git(각자의 사용자명)
